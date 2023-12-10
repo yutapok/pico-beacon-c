@@ -38,5 +38,8 @@ add_compile_options(-Wall
 include_directories(${PICO_SDK_PATH}/lib/btstack/platform/lwip)
 include_directories(src)
 
+pico_enable_stdio_usb(le_advertise 1)
+pico_enable_stdio_uart(le_advertise 0)
+
 set(BTSTACK_ROOT ${PICO_SDK_PATH}/lib/btstack)
 
